@@ -28,6 +28,7 @@ body {
 .el-form,
 .el-card,
 .el-dropdown,
+.el-date-picker,
 .el-input__inner::placeholder {
   font-family: 'Siemreap', sans-serif;
 }
