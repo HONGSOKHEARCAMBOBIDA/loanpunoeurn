@@ -1,0 +1,96 @@
+/* ---------------------------------------------------------------
+   Professional admin color palette, layered on top of Element Plus
+   using its official CSS variable overrides (no Tailwind).
+   Primary: deep slate blue  — trust, finance
+   Success: emerald green   — payments / paid
+   Warning: amber           — active / pending
+   Danger:  muted red       — delete / overdue
+----------------------------------------------------------------*/
+:root {
+  --el-color-primary: #2c4a6e;
+  --el-color-primary-light-3: #4a6d94;
+  --el-color-primary-light-5: #7a97b8;
+  --el-color-primary-light-7: #b9cbdc;
+  --el-color-primary-light-9: #eaf0f6;
+  --el-color-primary-dark-2: #1d3350;
+
+  --el-color-success: #1f9d63;
+  --el-color-warning: #d99a2b;
+  --el-color-danger: #c0392b;
+
+  --app-bg: #f4f6f9;
+  --app-sidebar-bg: #1d3350;
+  --app-sidebar-bg-active: #2c4a6e;
+  --app-header-bg: #ffffff;
+  --app-border: #e4e7ed;
+  --app-text-secondary: #6b7785;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--app-bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  color: #1f2937;
+}
+
+/* Reusable page-level spacing */
+.page-container {
+  padding: 24px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.page-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.page-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.section-card {
+  margin-bottom: 20px;
+}
+
+.text-muted {
+  color: var(--app-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 14px;
+  }
+}
