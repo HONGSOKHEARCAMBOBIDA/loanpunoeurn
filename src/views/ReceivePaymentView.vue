@@ -94,7 +94,7 @@ const { selectableLoans, saving, fetchLoanOptions, recordPayment } = useReceives
 const formRef = ref(null)
 const form = ref({
   loan_id: '',
-  receive_date: '',
+  receive_date: new Date().toISOString().split("T")[0],
   total_receive: null
 })
 
@@ -116,7 +116,7 @@ async function handleSubmit() {
     if (!valid) return
     const success = await recordPayment({ ...form.value })
     if (success) {
-      form.value = { loan_id: '', receive_date: '', total_receive: null }
+      form.value = { loan_id: '', receive_date: new Date().toISOString().split("T")[0], total_receive: null }
       formRef.value.clearValidate()
     }
   })
